@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 18:16:43 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/30 11:06:17 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/03 09:07:59 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,26 +23,26 @@ char	**ft_strsplit(char const *s, char c)
 {
 	char			**result;
 	size_t			word_len;
-	unsigned int	word_count;
 	unsigned int	result_index;
-	unsigned int	string_index;
 
-	if (!s)
+	if (!(result = (char**)malloc(8 * (ft_splitcount(s, c, ft_strlen(s)) + 1))))
 		return (NULL);
 	result_index = 0;
-	word_count = ft_splitcount(s, c, ft_strlen(s));
-	string_index = 0;
-	if (!(result = (char **)malloc(sizeof(*result) * (word_count + 1))))
-		return (NULL);
-	while (word_count-- > 0)
+	while (ft_splitcount(s, c, ft_strlen(s)) > 0)
 	{
 		word_len = 0;
-		while (s[string_index] == c)
-			string_index++;
-		while (s[string_index + word_len] != c)
+		while (*s == c)
+			s++;
+		while (s[word_len] != c && s[word_len])
 			word_len++;
-		result[result_index++] = ft_strsub(s, string_index, word_len);
-		string_index += word_len;
+		if (!(result[result_index++] = ft_strsub(s, 0, word_len)))
+		{
+			while (result_index-- > 0)
+				free((result[result_index]));
+			free(result);
+			return (NULL);
+		}
+		s += word_len;
 	}
 	result[result_index] = 0;
 	return (result);
