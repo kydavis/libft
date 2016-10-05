@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/30 11:53:59 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/05 10:03:02 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
 
-unsigned int		ft_splitcount(const void *v, char c, size_t len);
+unsigned int		ft_splcount(const void *v, char c, size_t len);
 
 void				ft_bzero(void *s, size_t n);
 void				ft_memdel(void **ap);

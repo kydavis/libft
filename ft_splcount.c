@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_splitcount.c                                    :+:      :+:    :+:   */
+/*   ft_splcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/30 09:57:14 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/30 11:06:33 by kdavis           ###   ########.fr       */
+/*   Created: 2016/10/05 10:04:12 by kdavis            #+#    #+#             */
+/*   Updated: 2016/10/05 10:04:14 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** character 'c'.
 */
 
-unsigned int		ft_splitcount(const void *v, char c, size_t len)
+unsigned int		ft_splcount(const void *v, char c, size_t len)
 {
 	unsigned int	word_count;
 	char			*s;

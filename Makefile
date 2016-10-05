@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/09/30 11:54:40 by kdavis           ###   ########.fr        #
+#    Updated: 2016/10/05 10:03:54 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ FILENAMES		+= ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c
 FILENAMES		+= ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
 FILENAMES		+= ft_putnbr_fd.c ft_iswhitespace.c ft_memdup.c ft_lstnew.c
 FILENAMES		+= ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c
-FILENAMES		+= ft_lstmap.c ft_lstadd_back.c ft_lstsize.c ft_splitcount.c
+FILENAMES		+= ft_lstmap.c ft_lstadd_back.c ft_lstsize.c ft_splcount.c
 FILENAMES		+= ft_isupper.c ft_islower.c
 
 BUILD			=$(addprefix build/, $(FILENAMES:.c=.o))
