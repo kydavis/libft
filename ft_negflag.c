@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_negflag.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 10:39:21 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/10 15:10:15 by kdavis           ###   ########.fr       */
+/*   Created: 2016/10/05 13:10:09 by kdavis            #+#    #+#             */
+/*   Updated: 2016/10/05 13:12:38 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 /*
-** 'Write' a string to the standard output.
+** Flags n as negative or not, as well as changes the value from negative n
+** to positive n.
 */
 
-void	ft_putstr(char const *s)
+void	ft_negflag(int *n, int *negative)
 {
-	if (!s)
+	if (*n < 0)
 	{
-		write(1, "(null)", 6);
-		return ;
+		*negative = 1;
+		*n = -*n;
 	}
-	write(1, s, ft_strlen(s));
+	else
+		*negative = 0;
 }

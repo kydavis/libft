@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 10:39:21 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/10 15:10:15 by kdavis           ###   ########.fr       */
+/*   Created: 2016/10/09 16:50:03 by kdavis            #+#    #+#             */
+/*   Updated: 2016/10/09 18:08:13 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
+#include <string.h>
 
 /*
-** 'Write' a string to the standard output.
+** Takes in a string and reverses it.
 */
 
-void	ft_putstr(char const *s)
+char	*ft_strrev(char	*str)
 {
-	if (!s)
+	char	*tail;
+	char	*head;
+	char	temp;
+	
+	if (!str)
+		return (NULL);
+	head = str;
+	tail = str + ft_strlen(str) - 1;
+	while (tail > head)
 	{
-		write(1, "(null)", 6);
-		return ;
+		temp = *head;
+		*head++ = *tail;
+		*tail-- = temp;
 	}
-	write(1, s, ft_strlen(s));
+	return (str);
 }

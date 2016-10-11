@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 16:47:21 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/28 09:50:56 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/06 13:32:43 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ size_t	ft_strlcat(char *s1, const char *s2, size_t size)
 	size_anchor = size;
 	while (*tail)
 	{
-		if (size == 0)
-			return (size_anchor + ft_strlen(srctail));
 		size--;
 		tail++;
+		if (size == 0 || (size + 1) == 0)
+			return (size_anchor + ft_strlen(srctail));
 	}
 	while (*srctail && size-- > 1)
 		*tail++ = *srctail++;

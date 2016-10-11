@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 10:36:00 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/27 12:39:19 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/09 18:43:56 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 void	ft_putstr_fd(char const *s, int fd)
 {
 	if (!s)
+	{
+		write(fd, "(null)", 6);
 		return ;
+	}
 	write(fd, s, ft_strlen(s));
 }

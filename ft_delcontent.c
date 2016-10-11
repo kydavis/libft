@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_delcontent.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 10:39:21 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/10 15:10:15 by kdavis           ###   ########.fr       */
+/*   Created: 2016/10/07 13:06:29 by kdavis            #+#    #+#             */
+/*   Updated: 2016/10/07 13:15:13 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
+#include <stdlib.h>
 
 /*
-** 'Write' a string to the standard output.
+** Function used to free the content of a list and set the size to be 0.
+** Useful as the del function in ft_lstdelone and ft_lstdel.
 */
 
-void	ft_putstr(char const *s)
+void	ft_delcontent(void *content, size_t content_size)
 {
-	if (!s)
-	{
-		write(1, "(null)", 6);
-		return ;
-	}
-	write(1, s, ft_strlen(s));
+	free(content);
+	(void)content_size;
 }

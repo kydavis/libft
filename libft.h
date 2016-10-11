@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/05 10:03:02 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/09 19:08:17 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1);
+char				*ft_strrev(char	*str);
+char				*ft_bitstoa(unsigned long long block, int bit_size);
+char				*ft_itoa_base(int n, int base);
 char				*ft_itoa(int n);
 
 void				*ft_memset(void *b, int c, size_t len);
@@ -50,7 +53,10 @@ void				*ft_memdup(const void *content, size_t content_size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memchr(const void *s, int c, size_t n);
+void				*ft_realloc(void *buf, size_t *buf_cap);
 void				*ft_memalloc(size_t size);
+
+unsigned long long	ft_power(unsigned long long nbr, int power);
 
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *str, size_t size);
@@ -94,5 +100,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *element);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstadd_back(t_list **alst, t_list *element);
+void				ft_negflag(int *n, int *neg);
+void				ft_delcontent(void *content, size_t content_size);
+void				ft_putbits(unsigned long long block, int bit_size);
 
 #endif
