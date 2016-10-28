@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 10:44:19 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/09 18:46:09 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/17 09:12:55 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putendl_fd(char const *s, int fd)
 {
 	if (!s)
 	{
-		write(1, "(null)\n",7);
+		write(1, "(null)\n", 7);
 		return ;
 	}
 	write(fd, s, ft_strlen(s));

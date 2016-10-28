@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/10/09 17:49:22 by kdavis           ###   ########.fr        #
+#    Updated: 2016/10/14 12:20:25 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ FILENAMES		+=ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c
 FILENAMES		+=ft_lstmap.c ft_lstadd_back.c ft_lstsize.c ft_splcount.c
 FILENAMES		+=ft_isupper.c ft_islower.c ft_new_handle.c ft_delcontent.c
 FILENAMES		+=ft_realloc.c ft_power.c ft_putbits.c ft_negflag.c 
-FILENAMES		+=ft_itoa_base.c ft_strrev.c ft_bitstoa.c
+FILENAMES		+=ft_itoa_base.c ft_strrev.c ft_bitstoa.c ft_strchrrmv.c
+FILENAMES		+=ft_strctchr.c ft_strctrim.c
 
 
 BUILD			=$(addprefix build/, $(FILENAMES:.c=.o))

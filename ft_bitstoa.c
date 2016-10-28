@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/09 17:26:07 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/10 10:43:48 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/17 09:13:14 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char		*ft_bitstoa(unsigned long long block, int bit_size)
 	char	*result;
 
 	if (bit_size == 0)
-		return(NULL);
+		return (NULL);
 	result = ft_strnew(bit_size + 1);
 	return (static_bitloader(result, block, bit_size));
 }

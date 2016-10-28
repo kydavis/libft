@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_strctrim.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/09 16:50:03 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/17 09:16:44 by kdavis           ###   ########.fr       */
+/*   Created: 2016/10/14 12:13:30 by kdavis            #+#    #+#             */
+/*   Updated: 2016/10/17 09:19:35 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /*
-** Takes in a string and reverses it.
+**	Trims char c from the front and back of str.
 */
 
-char	*ft_strrev(char *str)
+char	*ft_strctrim(char *str, char c)
 {
-	char	*tail;
-	char	*head;
-	char	temp;
+	int		i;
+	int		len;
+	char	*res;
 
-	if (!str)
+	i = 0;
+	len = 0;
+	while (*str == c)
+		str++;
+	while (str[i])
+		i++;
+	i--;
+	while (str[i] == c && i >= 0)
+		i--;
+	if (!(res = ft_strsub(str, 0, i + 1)))
 		return (NULL);
-	head = str;
-	tail = str + ft_strlen(str) - 1;
-	while (tail > head)
-	{
-		temp = *head;
-		*head++ = *tail;
-		*tail-- = temp;
-	}
-	return (str);
+	return (res);
 }

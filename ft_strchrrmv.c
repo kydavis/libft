@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_strchrrmv.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/09 16:50:03 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/17 09:16:44 by kdavis           ###   ########.fr       */
+/*   Created: 2016/10/14 12:10:10 by kdavis            #+#    #+#             */
+/*   Updated: 2016/10/17 09:18:23 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /*
-** Takes in a string and reverses it.
+**	Removes all instances of char c from str.
 */
 
-char	*ft_strrev(char *str)
+char	*ft_strchrrmv(char *str, char c)
 {
-	char	*tail;
-	char	*head;
-	char	temp;
+	int		newlen;
+	int		i;
+	int		j;
+	char	*result;
 
-	if (!str)
-		return (NULL);
-	head = str;
-	tail = str + ft_strlen(str) - 1;
-	while (tail > head)
+	i = 0;
+	j = 0;
+	newlen = ft_strlen(str) - ft_strctchr(str, c);
+	result = ft_strnew(newlen);
+	while (str[i])
 	{
-		temp = *head;
-		*head++ = *tail;
-		*tail-- = temp;
+		if (str[i] != c)
+			result[j++] = str[i];
+		i++;
 	}
-	return (str);
+	return (result);
 }

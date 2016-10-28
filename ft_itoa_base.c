@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/09 12:15:37 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/10 10:27:14 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/17 09:13:44 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static char		*static_loader(char *str, int n, int base, size_t size)
 	{
 		mod = n % base;
 		if (mod > 9)
-			*(tail + --size) = mod + 55; 
+			*(tail + --size) = mod + 55;
 		else
 			*(tail + --size) = mod + '0';
 		n /= base;
@@ -50,7 +50,7 @@ static char		*static_loader(char *str, int n, int base, size_t size)
 	return (str);
 }
 
-char		*ft_itoa_base(int n, int base)
+char			*ft_itoa_base(int n, int base)
 {
 	char	*result;
 	size_t	size;

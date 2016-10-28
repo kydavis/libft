@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_strctchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/09 16:50:03 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/17 09:16:44 by kdavis           ###   ########.fr       */
+/*   Created: 2016/10/14 12:07:20 by kdavis            #+#    #+#             */
+/*   Updated: 2016/10/14 12:08:50 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /*
-** Takes in a string and reverses it.
+** Counts the number of instances of char c that occur in str.
 */
 
-char	*ft_strrev(char *str)
+int	ft_strctchr(char *str, char c)
 {
-	char	*tail;
-	char	*head;
-	char	temp;
+	int count;
 
-	if (!str)
-		return (NULL);
-	head = str;
-	tail = str + ft_strlen(str) - 1;
-	while (tail > head)
+	count = 0;
+	while (*str)
 	{
-		temp = *head;
-		*head++ = *tail;
-		*tail-- = temp;
+		if (*str == c)
+			count++;
+		str++;
 	}
-	return (str);
+	return (count);
 }
