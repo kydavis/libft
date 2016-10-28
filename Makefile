@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/10/14 12:20:25 by kdavis           ###   ########.fr        #
+#    Updated: 2016/10/28 15:39:22 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ FILENAMES		+=ft_putnbr_fd.c ft_iswhitespace.c ft_memdup.c ft_lstnew.c
 FILENAMES		+=ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c
 FILENAMES		+=ft_lstmap.c ft_lstadd_back.c ft_lstsize.c ft_splcount.c
 FILENAMES		+=ft_isupper.c ft_islower.c ft_new_handle.c ft_delcontent.c
-FILENAMES		+=ft_realloc.c ft_power.c ft_putbits.c ft_negflag.c 
+FILENAMES		+=ft_memrealloc.c ft_power.c ft_putbits.c ft_negflag.c 
 FILENAMES		+=ft_itoa_base.c ft_strrev.c ft_bitstoa.c ft_strchrrmv.c
 FILENAMES		+=ft_strctchr.c ft_strctrim.c
 
