@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/28 18:44:55 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/29 12:24:34 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memrealloc(void *ptr, size_t new_size);
+void				*ft_memreallocf(void *ptr, size_t new_size);
 void				*ft_memalloc(size_t size);
 void				*ft_relink_lst(t_list **head, t_list *lst);
 
