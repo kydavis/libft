@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 11:00:48 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/05 09:51:25 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/10/31 11:05:01 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		if (!(copycont = ft_memdup(content, content_size)))
 		{
-			free(link);
+			ft_memdel((void *)&link);
 			return (NULL);
 		}
 		link->content = copycont;
