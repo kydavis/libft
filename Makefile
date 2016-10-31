@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/10/29 12:25:11 by kdavis           ###   ########.fr        #
+#    Updated: 2016/10/31 14:22:10 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ FILENAMES		+=ft_isupper.c ft_islower.c ft_new_handle.c ft_delcontent.c
 FILENAMES		+=ft_memrealloc.c ft_power.c ft_putbits.c ft_negflag.c 
 FILENAMES		+=ft_itoa_base.c ft_strrev.c ft_bitstoa.c ft_strchrrmv.c
 FILENAMES		+=ft_strctchr.c ft_strctrim.c ft_relink_lst.c ft_memreallocf.c
+FILENAMES		+=get_next_line.c
 
 
 BUILD			=$(addprefix build/, $(FILENAMES:.c=.o))
