@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/10/31 14:22:10 by kdavis           ###   ########.fr        #
+#    Updated: 2016/11/02 19:26:06 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ FILENAMES		+=get_next_line.c
 
 
 BUILD			=$(addprefix build/, $(FILENAMES:.c=.o))
-CFLAGS			=-Wall -Wextra -Werror
+CFLAGS			=-Wall -Wextra -Werror -I includes/
 CC				= gcc
 
 all: $(NAME)
