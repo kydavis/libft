@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/01 17:55:56 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/02 11:44:32 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "get_next_line.h"
 # include "ft_memory.h"
 # include "ft_list.h"
+# include "ft_macro.h"
 
 char				**ft_strsplit(char const *s, char c);
 
