@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoui.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 17:49:05 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 14:07:06 by kdavis           ###   ########.fr       */
+/*   Created: 2016/11/03 16:19:56 by kdavis            #+#    #+#             */
+/*   Updated: 2016/11/03 16:23:12 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Converts a string of numbers into an int. If the value of the digit string
-** is larger than max long long or smaller than min long long return -1 or 0
-** respectivley.
+** Converts a string to its respective unsigned int value.
 */
 
-int	ft_atoi(const char *str)
+unsigned int ft_atoui(const char *str)
 {
-	return ((int)(ft_atoll(str)));
+	return((unsigned int)ft_atoull(str));
 }

@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 11:01:49 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/03 16:23:09 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,17 @@ char				*ft_strchrrmv(char *str, char c);
 char				*ft_strctrim(char *str, char c);
 
 unsigned long long	ft_power(unsigned long long nbr, int power);
+unsigned long long	ft_atoull(const char *str);
 
 long long			ft_absolute(long long n);
+long long			ft_atoll(const char *str);
 
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *str, size_t size);
+
+unsigned long 		ft_atoul(const char *str);
+
+long				ft_atol(const char *str);
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -69,6 +75,7 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strctchr(char *str, char c);
 
 unsigned int		ft_splcount(const void *v, char c, size_t len);
+unsigned int 		ft_atoui(const char *str);
 
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
@@ -84,5 +91,8 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_negflag(int *n, int *neg);
 void				ft_putbits(unsigned long long block, int bit_size);
+void				ft_putsbase_fd(long long n, long long base, int fd);
+void				ft_putubase_fd(unsigned long long n, 
+						unsigned long long base, int fd);
 
 #endif
