@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/02 11:44:32 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/02 20:36:43 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char				**ft_strsplit(char const *s, char c);
 
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strdup(const char *s1);
+char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strchr(const char *str, int c);
 char				*ft_strrchr(const char *str, int c);

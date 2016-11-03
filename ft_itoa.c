@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 10:12:58 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/05 10:58:51 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/02 19:41:33 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_intsize(int n)
 	while (n != 0)
 	{
 		size++;
-		n = n / 10;
+		n /= 10;
 	}
 	return (size);
 }
@@ -41,18 +41,15 @@ static char	*ft_loadnbr(int n, char *c)
 {
 	char	sign;
 
-	sign = 0;
+	sign = 1;
 	if (n < 0)
+		sign = -1;
+	while (n != 0)
 	{
-		n = -n;
-		sign = 1;
-	}
-	while (n > 0)
-	{
-		*c-- = (n % 10) + '0';
+		*c-- = ((n % 10) * sign) + '0';
 		n /= 10;
 	}
-	if (sign)
+	if (sign == -1)
 		*c = '-';
 	else
 		++c;
@@ -71,8 +68,6 @@ char		*ft_itoa(int n)
 	size = ft_intsize(n);
 	if (!(nbr = ft_strnew(size)))
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strcpy(nbr, "-2147483648"));
 	if (n == 0)
 		*nbr = '0';
 	else
