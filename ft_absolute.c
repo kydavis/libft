@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_absolute.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 10:52:53 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 11:11:20 by kdavis           ###   ########.fr       */
+/*   Created: 2016/11/03 10:58:59 by kdavis            #+#    #+#             */
+/*   Updated: 2016/11/03 11:10:12 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Takes an int and prints it into the appropriate file directory.
+** Returns the absolute value of a long long. DOES NOT WORK WITH MIN LONG LONG.
 */
 
-void	ft_putnbr_fd(int n, int fd)
+long long	ft_absolute(long long n)
 {
-	if (n < 0)
-		ft_putchar_fd('-', fd);
-	if (n > 9 || n < -9)
-	{
-		ft_putnbr_fd((int)ft_absolute(n / 10), fd);
-		ft_putnbr_fd((int)ft_absolute(n % 10), fd);
-	}
-	else
-		ft_putchar_fd(((int)ft_absolute(n) + '0'), fd);
+	return (n < 0 ? -n : n);
 }

@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/02 20:36:43 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/03 11:01:49 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char				*ft_strchrrmv(char *str, char c);
 char				*ft_strctrim(char *str, char c);
 
 unsigned long long	ft_power(unsigned long long nbr, int power);
+
+long long			ft_absolute(long long n);
 
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *str, size_t size);
