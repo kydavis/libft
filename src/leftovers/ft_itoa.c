@@ -6,32 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 10:12:58 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/02 19:41:33 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/10 10:07:22 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** Determines the size of the string needed for itoa. Exception case for n = 0.
-*/
-
-static int	ft_intsize(int n)
-{
-	int	size;
-
-	size = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-		size++;
-	while (n != 0)
-	{
-		size++;
-		n /= 10;
-	}
-	return (size);
-}
 
 /*
 ** Loads the string for itoa.
@@ -65,7 +44,7 @@ char		*ft_itoa(int n)
 	char	*nbr;
 	int		size;
 
-	size = ft_intsize(n);
+	size = ft_llsize_base(n, 10);
 	if (!(nbr = ft_strnew(size)))
 		return (NULL);
 	if (n == 0)
