@@ -6,17 +6,14 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:02:46 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/10 10:04:16 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/10 10:27:12 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef	FT_STRING_H
 # define FT_STRING_H
 
-#ifndef NULL
-# define NULL ((void *)0)
-#endif
-
+# include <string.h>
 # include "ft_memory.h"
 
 char				**ft_strsplit(char const *s, char c);

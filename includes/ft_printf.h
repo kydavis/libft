@@ -6,12 +6,14 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/10 10:12:27 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/10 10:27:16 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+
+# include <string.h>
 
 size_t	ft_ullsize_base(unsigned long long value, unsigned long long base);
 size_t	ft_llsize_base(long long value, long long base);
