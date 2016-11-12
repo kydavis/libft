@@ -6,11 +6,12 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 11:08:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/31 14:27:39 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/11 19:19:19 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "get_next_line.h"
 #include <unistd.h>
 
 /*
@@ -120,19 +121,18 @@ static t_list	*scan_list(t_list **fd_lst, const int fd)
 	void	*ptr;
 
 	tail = *fd_lst;
-	if (!(ptr = ft_memalloc(1)))
-		return (NULL);
 	while (tail)
 	{
 		if (tail->content_size == (size_t)fd)
 			return (tail);
 		tail = tail->next;
 	}
-	if (!(tail = ft_lstnew(ptr, 1)))
-	{
-		ft_memdel(ptr);
+	if (!(ptr = ft_memalloc(1)))
 		return (NULL);
-	}
+	tail = ft_lstnew(ptr, 1);
+	ft_memdel(&ptr);
+	if (!(tail))
+		return (NULL);
 	tail->content_size = fd;
 	if (!(*fd_lst))
 	{
