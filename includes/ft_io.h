@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/10 18:19:29 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/18 13:50:30 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "ft_string.h"
 
 size_t	ft_ullsize_base(unsigned long long value, unsigned long long base);
-size_t	ft_llsize_base(long long value, long long base);
+size_t	ft_llsize_base(long long value, long long base, int sflag);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putchar(char c);

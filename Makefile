@@ -6,13 +6,13 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/11/10 10:08:55 by kdavis           ###   ########.fr        #
+#    Updated: 2016/11/20 17:04:09 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	libft.a
 
-SUBDIR			= memory list gnl leftovers type str printf
+SUBDIR			= memory list gnl leftovers type str ft_io
 
 MEMORY			=ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c
 MEMORY			+=ft_memchr.c ft_memcmp.c ft_memalloc.c ft_memdel.c ft_memdup.c
@@ -53,7 +53,7 @@ LEFTOVERS		+=ft_atoul.c ft_atoui.c
 FILENAMES		=$(addprefix memory/, $(MEMORY))
 FILENAMES		+=$(addprefix list/, $(LIST))
 FILENAMES		+=$(addprefix gnl/, $(GNL))
-FILENAMES		+=$(addprefix printf/, $(PRINTF))
+FILENAMES		+=$(addprefix ft_io/, $(PRINTF))
 FILENAMES		+=$(addprefix leftovers/, $(LEFTOVERS))
 FILENAMES		+=$(addprefix type/, $(TYPE))
 FILENAMES		+=$(addprefix str/, $(STR))

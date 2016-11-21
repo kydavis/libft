@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/09 12:15:37 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/10 09:56:14 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/18 13:53:06 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char			*ft_itoa_base(int n, int base)
 		return (NULL);
 	if (base == 10)
 		return (ft_itoa(n));
-	size = ft_llsize_base(n, base);
+	size = ft_llsize_base(n, base, 0);
 	if (!(result = ft_strnew(size)))
 		return (NULL);
 	return (static_loader(result, n, base, size));

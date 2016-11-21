@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 10:12:58 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/10 10:07:22 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/18 13:51:35 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char		*ft_itoa(int n)
 	char	*nbr;
 	int		size;
 
-	size = ft_llsize_base(n, 10);
+	size = ft_llsize_base(n, 10, 0);
 	if (!(nbr = ft_strnew(size)))
 		return (NULL);
 	if (n == 0)

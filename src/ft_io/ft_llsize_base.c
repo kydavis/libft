@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:54:28 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/10 16:45:06 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/18 13:56:32 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@
 /*
 ** ft_llsize_base calculates the number of characters present in an
 ** long long for the particular base. Increases the size if the value is
-** negative and base 10 to accomadate the '-' character.
+** negative to accomadate the '-' character, or if the sflag is on to
+** accomadate for either the '+' or ' ' characters.
+** Generally if you are dealing with non base 10 numbers you should use
+** the unsigned size function.
 */
 
-size_t	ft_llsize_base(long long value, long long base)
+size_t	ft_llsize_base(long long value, long long base, int sflag)
 {
 	size_t	size;
 
@@ -28,7 +31,7 @@ size_t	ft_llsize_base(long long value, long long base)
 	if (base == 1)
 		return (ft_absolute(value));
 	size = 1;
-	if (value < 0 && base == 10)
+	if (value < 0 || sflag)
 		size++;
 	while (value / base != 0)
 	{
