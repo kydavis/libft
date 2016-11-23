@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/29 12:28:50 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/29 12:28:57 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/20 18:15:44 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** pointer if the reallocation fails.
 */
 
-void	*ft_memreallocf(void *ptr, size_t new_size)
+void	*ft_memreallocf(void *ptr, size_t new_size, size_t old_size)
 {
 	void	*newbuf;
 
@@ -30,7 +30,7 @@ void	*ft_memreallocf(void *ptr, size_t new_size)
 	}
 	if (!ptr)
 		return (newbuf);
-	ft_memmove(newbuf, ptr, new_size);
+	ft_memmove(newbuf, ptr, old_size);
 	ft_memdel(&ptr);
 	return (newbuf);
 }

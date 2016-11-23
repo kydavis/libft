@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 11:08:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/11 19:19:19 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:12:48 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,14 @@ static int		read_line(t_list *lst, size_t o, char **line, int parce_flag)
 
 	while (!(parce_flag))
 	{
-		if ((ret = read(lst->content_size, lst->content + o, BUFF_SIZE)) == -1)
+		if ((ret = read(lst->content_size, lst->content + o - 1, BUFF_SIZE))
+			== -1)
 			return (-2);
 		((char *)lst->content)[ret + o] = '\0';
 		if ((parce_flag = parce_buffer(lst, lst->content, line)) != 0)
 			break ;
 		o += BUFF_SIZE;
-		if (!(lst->content = ft_memreallocf(lst->content, BUFF_SIZE + o + 1)))
+		if (!(lst->content = ft_memreallocf(lst->content, BUFF_SIZE + o, o)))
 			return (-1);
 		if (!ret)
 		{
@@ -76,9 +77,7 @@ static int		read_line(t_list *lst, size_t o, char **line, int parce_flag)
 			return (0);
 		}
 	}
-	if (parce_flag == -1)
-		return (-1);
-	return (1);
+	return (parce_flag == -1 ? -1 : 1);
 }
 
 /*
@@ -97,8 +96,8 @@ static int		search_line(t_list *lst, char **line)
 		return (-1);
 	if (parce_flag == 0)
 	{
-		o = ft_strlen(lst->content);
-		if (!(lst->content = ft_memreallocf(lst->content, BUFF_SIZE + o + 1)))
+		o = ft_strlen(lst->content) + 1;
+		if (!(lst->content = ft_memreallocf(lst->content, BUFF_SIZE + o, o)))
 			return (-1);
 		read_flag = read_line(lst, o, line, parce_flag);
 		if (read_flag != 1)

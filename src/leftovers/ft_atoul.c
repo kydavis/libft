@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 16:17:31 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 16:21:15 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/22 19:50:48 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Converts a string to its respective unsigned long value.
 */
 
-unsigned long ft_atoul(const char *str)
+unsigned long	ft_atoul(const char *str)
 {
-	return((unsigned long)ft_atoull(str));
+	return ((unsigned long)ft_atoull(str));
 }

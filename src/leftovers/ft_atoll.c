@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 13:13:46 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 16:15:38 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/22 19:51:25 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 long long	ft_atoll(const char *str)
 {
 	unsigned long long	result;
-	long long	neg;
+	long long			neg;
 
 	neg = 1;
 	result = 0;

@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 16:19:56 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 16:23:12 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/22 19:52:02 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Converts a string to its respective unsigned int value.
 */
 
-unsigned int ft_atoui(const char *str)
+unsigned int	ft_atoui(const char *str)
 {
-	return((unsigned int)ft_atoull(str));
+	return ((unsigned int)ft_atoull(str));
 }

@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/11/20 17:04:09 by kdavis           ###   ########.fr        #
+#    Updated: 2016/11/22 19:46:36 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,11 @@ STR				+=ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strsub.c
 STR				+=ft_strchrrmv.c ft_strndup.c ft_strnequ.c ft_strjoin.c
 STR				+=ft_strtrim.c ft_strsplit.c ft_splcount.c
 
-PRINTF			=ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
-PRINTF			+=ft_putnbr_fd.c ft_putchar.c ft_putstr.c ft_putendl.c
-PRINTF			+=ft_putbits.c ft_putsbase_fd.c ft_putubase_fd.c
-PRINTF			+=ft_ullsize_base.c ft_llsize_base.c
+FT_IO			=ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
+FT_IO			+=ft_putnbr_fd.c ft_putchar.c ft_putstr.c ft_putendl.c
+FT_IO			+=ft_putbits.c ft_putsbase_fd.c ft_putubase_fd.c
+FT_IO			+=ft_ullsize_base.c ft_llsize_base.c ft_putwchar_fd.c
+FT_IO			+=ft_putwstr_fd.c
 
 LEFTOVERS		+=ft_atoi.c 
 LEFTOVERS		+=ft_itoa.c
@@ -53,7 +54,7 @@ LEFTOVERS		+=ft_atoul.c ft_atoui.c
 FILENAMES		=$(addprefix memory/, $(MEMORY))
 FILENAMES		+=$(addprefix list/, $(LIST))
 FILENAMES		+=$(addprefix gnl/, $(GNL))
-FILENAMES		+=$(addprefix ft_io/, $(PRINTF))
+FILENAMES		+=$(addprefix ft_io/, $(FT_IO))
 FILENAMES		+=$(addprefix leftovers/, $(LEFTOVERS))
 FILENAMES		+=$(addprefix type/, $(TYPE))
 FILENAMES		+=$(addprefix str/, $(STR))
