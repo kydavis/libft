@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/11/25 17:13:09 by kdavis           ###   ########.fr        #
+#    Updated: 2016/11/25 18:47:00 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ FT_IO			=ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
 FT_IO			+=ft_putnbr_fd.c ft_putchar.c ft_putstr.c ft_putendl.c
 FT_IO			+=ft_putbits.c ft_putsbase_fd.c ft_putubase_fd.c
 FT_IO			+=ft_ullsize_base.c ft_llsize_base.c ft_putwchar_fd.c
-FT_IO			+=ft_putwstr_fd.c ft_wctomb.c
+FT_IO			+=ft_putwstr_fd.c ft_wctomb.c ft_wcstombs.c
 
 LEFTOVERS		+=ft_atoi.c 
 LEFTOVERS		+=ft_itoa.c
