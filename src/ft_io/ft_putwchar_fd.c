@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:32:46 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/25 17:18:46 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/25 17:34:43 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** appropriate file descriptor.
 */
 
-void		ft_putwchar_fd(wchar_t wc, int fd)
+wint_t	ft_putwchar_fd(wchar_t wc, int fd)
 {
 	char	bytes[4];
 	int		n_bytes;
@@ -30,4 +30,5 @@ void		ft_putwchar_fd(wchar_t wc, int fd)
 		write(2, "value not supported by UTF-8", 28);
 	else
 		write(fd, bytes, n_bytes);
+	return (n_bytes == -1 ? WEOF : wc);
 }

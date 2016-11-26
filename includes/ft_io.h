@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/25 17:12:42 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/25 18:09:29 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ size_t	ft_ullsize_base(unsigned long long value, unsigned long long base);
 size_t	ft_llsize_base(long long value, long long base, int sflag);
 
 int		ft_wctomb(char *s, wchar_t);
+wint_t	ft_putwchar_fd(wint_t wc, int fd);
 
 void	ft_putchar_fd(char c, int fd);
-void	ft_putwchar_fd(wint_t wc, int fd);
 void	ft_putchar(char c);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putwstr_fd(wint_t *wstr, int fd);
