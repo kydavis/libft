@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 12:08:20 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/02 21:00:48 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/27 10:36:38 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,5 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
-
-	return ((!s || !(sub = ft_strndup(s + start, len))) ? NULL : sub);
+	return ((!s ? NULL : ft_strndup(s + start, len)));
 }
