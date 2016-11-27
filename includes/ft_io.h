@@ -6,12 +6,12 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/27 14:38:04 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/27 14:42:25 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_IO_H
+# define FT_IO_H
 
 # include <string.h>
 # include <wchar.h>
