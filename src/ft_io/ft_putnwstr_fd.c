@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 18:44:18 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/22 19:48:53 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/27 14:38:39 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 #include <wchar.h>
 
 /*
-** ft_strwlen returns the number of BYTES in the wide string.
+** ft_putnwstr_fd will write up to n bytes of the wstr, returns the number of
+** bytes it wrote, or a negative one if a invalid character is encountered.
 */
 
-size_t	ft_strwlen(wint_t *wstr)
+size_t	ft_putnwstr_fd(wchar_t *wstr, size_t n, int fd)
 {
-	wint_t	*tail;
+	size_t	converted_char;
+	int		current_char;
+	char	temp[4];
 
-	tail = wstr;
-	while (*tail)
-		tail += 1;
-	return (*tail - *wstr);
-}
-
-/*
-** For now ft_putwstr will just iterativley call ft_putwchar, but want to
-** figure out a way for it to create a multibyte string for it to read.
-*/
-
-void	ft_putwstr_fd(wint_t *wstr, int fd)
-{
+	converted_char = 0;
 	while (*wstr)
-		ft_putwchar_fd(*wstr++, fd);
+	{
+		if ((current_char = ft_wctomb(temp, *wstr++)) == -1)
+			return ((size_t)-1);
+		if ((converted_char + current_char) <= n)
+			ft_putwchar_fd(*wstr, fd);
+		else
+			return (converted_char);
+		converted_char += current_char;
+	}
+	return (converted_char);
 }
