@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 18:44:18 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/27 14:38:39 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/27 14:51:19 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,13 @@ size_t	ft_putnwstr_fd(wchar_t *wstr, size_t n, int fd)
 	converted_char = 0;
 	while (*wstr)
 	{
-		if ((current_char = ft_wctomb(temp, *wstr++)) == -1)
+		if ((current_char = ft_wctomb(temp, *wstr)) == -1)
 			return ((size_t)-1);
 		if ((converted_char + current_char) <= n)
 			ft_putwchar_fd(*wstr, fd);
 		else
 			return (converted_char);
+		wstr++;
 		converted_char += current_char;
 	}
 	return (converted_char);

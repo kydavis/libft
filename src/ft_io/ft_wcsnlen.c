@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wcscheckn.c                                     :+:      :+:    :+:   */
+/*   ft_wcsnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/27 11:55:21 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/27 11:58:50 by kdavis           ###   ########.fr       */
+/*   Created: 2016/11/27 15:45:49 by kdavis            #+#    #+#             */
+/*   Updated: 2016/11/27 15:45:52 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <wchar.h>
 
 /*
-** ft_wcscheckn checks n bytes of a wide character string for the prescence
+** ft_wcsnlen checks n bytes of a wide character string for the prescence
 ** of invalid characters.
 */
 
-size_t	ft_wcscheckn(const wchar_t *wcs, size_t n)
+size_t	ft_wcsnlen(const wchar_t *wcs, size_t n)
 {
 	size_t	converted_char;
 	int		current_char;
