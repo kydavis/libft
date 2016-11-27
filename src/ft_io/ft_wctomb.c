@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 16:41:24 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/25 18:08:53 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/26 20:42:05 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int	ft_wctomb(char *s, wchar_t wc)
 	if (wc > 0x10FFFF)
 		return (-1);
 	if (wc > 0xFFFF)
-		*(s + bytes++) = 0xF0 + ((wc & 0x1C0000) >> 18);
+		*(s + bytes++) = 0xF0 | ((wc & 0x1C0000) >> 18);
 	if (wc > 0x7FF)
-		*(s + bytes++) = (wc <= 0xFFFF ? 0xE0 : 0x80) + ((wc & 0x3F000) >> 12);
+		*(s + bytes++) = (wc <= 0xFFFF ? 0xE0 : 0x80) | ((wc & 0x3F000) >> 12);
 	if (wc > 0x7F)
-		*(s + bytes++) = (wc <= 0x7FF ? 0xC0 : 0x80) + ((wc & 0xFC0) >> 6);
+		*(s + bytes++) = (wc <= 0x7FF ? 0xC0 : 0x80) | ((wc & 0xFC0) >> 6);
 	if (wc >= 0x00)
-		*(s + bytes++) = (wc <= 0x7F ? 0x0 + (wc & 0x7F) : 0x80 + (wc & 0x3F));
+		*(s + bytes++) = (wc <= 0x7F ? 0x0 | (wc & 0x7F) : 0x80 | (wc & 0x3F));
 	return (bytes);
 }
