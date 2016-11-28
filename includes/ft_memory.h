@@ -6,12 +6,14 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/01 17:40:20 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/22 10:58:23 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 10:05:26 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef	FT_MEMORY_H
 # define FT_MEMORY_H
+
+# include <stdlib.h>
 
 void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);

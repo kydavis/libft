@@ -6,12 +6,12 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 15:41:05 by kdavis            #+#    #+#             */
-/*   Updated: 2016/10/28 15:41:09 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 10:04:03 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "ft_memory.h"
 
 /*
 ** Allocates a new space of memory for ptr, and copies as much memory as

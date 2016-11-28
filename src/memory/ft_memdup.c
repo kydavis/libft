@@ -6,12 +6,12 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 18:13:03 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/30 09:16:31 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 10:02:57 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
+#include "ft_memory.h"
 
 /*
 ** Duplicates a string of memory into the heap.

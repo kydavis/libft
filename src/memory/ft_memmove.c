@@ -6,13 +6,13 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 10:39:43 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/26 13:28:47 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 10:03:37 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
-#include "libft.h"
+#include "ft_memory.h"
 
 /*
 ** Checks to see if dst is located before or after src. If dst is located

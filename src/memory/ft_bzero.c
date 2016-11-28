@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 20:28:17 by kdavis            #+#    #+#             */
-/*   Updated: 2016/09/27 09:27:44 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 10:02:26 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
 /*
 ** Sets n bytes located at C-string s to 0.
