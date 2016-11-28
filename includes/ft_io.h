@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/27 15:43:56 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:44:44 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,50 @@
 # include <wchar.h>
 # include "ft_string.h"
 
+/*
+** math functions
+*/
+
+long long			ft_absolute(long long n);
+
+/*
+** string to integer conversion functions.
+*/
+
+unsigned long long	ft_atoull(const char *str);
+unsigned long 		ft_atoul(const char *str);
+unsigned int 		ft_atoui(const char *str);
+long long			ft_atoll(const char *str);
+long				ft_atol(const char *str);
+int					ft_atoi(const char *str);
+
+/*
+** Functions that find the length of variables
+*/
+
 size_t	ft_ullsize_base(unsigned long long value, unsigned long long base);
 size_t	ft_llsize_base(long long value, long long base, int sflag);
-size_t	ft_wcstombs(char *s, const wchar_t *wcs, size_t n);
 size_t	ft_wcslen(const wchar_t *wcs);
 size_t	ft_wcsnlen(const wchar_t *wcs, size_t n);
-size_t	ft_putnwstr_fd(wint_t *wstr, size_t n, int fd);
+size_t	ft_strlen(const char *str);
 
+/*
+** Functions that convert wide characters into multibyte arrays.
+*/
+
+size_t	ft_wcstombs(char *s, const wchar_t *wcs, size_t n);
 int		ft_wctomb(char *s, wchar_t);
+
+/*
+** Functions that print wide characters as multibyte arrays.
+*/
+
+size_t	ft_putnwstr_fd(wint_t *wstr, size_t n, int fd);
 wint_t	ft_putwchar_fd(wint_t wc, int fd);
+
+/*
+** Functions for printing non wide variable.
+*/
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putchar(char c);

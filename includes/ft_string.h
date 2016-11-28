@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:02:46 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/11 16:55:25 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:42:54 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_STRING_H
 
 # include <string.h>
+# include "ft_io.h"
 # include "ft_memory.h"
 
 char				**ft_strsplit(char const *s, char c);
@@ -38,7 +39,6 @@ char				*ft_strrev(char	*str);
 char				*ft_strchrrmv(char *str, char c);
 char				*ft_strctrim(char *str, char c);
 
-size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *str, size_t size);
 
 unsigned int		ft_splcount(const void *v, char c, size_t len);
