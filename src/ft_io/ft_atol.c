@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 14:32:44 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 14:33:47 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:49:40 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_io.h"
 
 /*
 ** Converts a string into a long.

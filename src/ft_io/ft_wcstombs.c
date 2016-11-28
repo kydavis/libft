@@ -6,11 +6,12 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 18:08:39 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/25 19:08:05 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:59:42 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_io.h"
+#include "ft_memory.h"
 #include <wchar.h>
 
 /*

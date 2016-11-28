@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:51:52 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 16:17:12 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:49:20 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_type.h"
 
 /*
 ** Converts a string to its respective unsigned long long value.

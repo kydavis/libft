@@ -6,12 +6,12 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:54:28 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/18 13:56:32 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:50:53 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
+#include "ft_io.h"
 
 /*
 ** ft_llsize_base calculates the number of characters present in an

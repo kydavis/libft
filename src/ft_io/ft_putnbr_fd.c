@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 10:52:53 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/10 16:48:23 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:54:27 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_io.h"
 
 /*
 ** Takes an int and prints it into the appropriate file directory in base 10.

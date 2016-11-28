@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 16:19:56 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/22 19:52:02 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:50:19 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_io.h"
 
 /*
 ** Converts a string to its respective unsigned int value.

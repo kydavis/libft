@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/28 09:44:44 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:52:20 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <string.h>
 # include <wchar.h>
-# include "ft_string.h"
 
 /*
 ** math functions
@@ -70,7 +69,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr(int n);
-void	ft_putbits(unsigned long long block, int bit_size);
 void	ft_putsbase_fd(long long n, long long base, int fd, char hex);
 void	ft_putubase_fd(unsigned long long n, unsigned long long base, int fd,
 	   	char hex);

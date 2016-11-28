@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 17:49:05 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 14:07:06 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/11/28 09:47:37 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_io.h"
 
 /*
 ** Converts a string of numbers into an int. If the value of the digit string
