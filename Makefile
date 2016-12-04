@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/11/28 09:59:53 by kdavis           ###   ########.fr        #
+#    Updated: 2016/12/03 17:30:44 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,12 +42,12 @@ FT_IO			+=ft_putsbase_fd.c ft_putubase_fd.c
 FT_IO			+=ft_ullsize_base.c ft_llsize_base.c ft_putwchar_fd.c
 FT_IO			+=ft_putnwstr_fd.c ft_wctomb.c ft_wcstombs.c ft_wcslen.c
 FT_IO			+=ft_wcsnlen.c ft_atoi.c ft_absolute.c ft_atoll.c ft_atol.c
-FT_IO			+=ft_atoull.c ft_atoul.c ft_atoui.c ft_strlen.c 
+FT_IO			+=ft_atoull.c ft_atoul.c ft_atoui.c ft_strlen.c ft_itoa.c
+FT_IO			+=ft_ulltoa_base.c ft_itoa_base.c
 
-LEFTOVERS		+=ft_itoa.c
 LEFTOVERS		+=ft_new_handle.c
 LEFTOVERS		+=ft_power.c ft_negflag.c 
-LEFTOVERS		+=ft_itoa_base.c ft_bitstoa.c ft_putbits.c
+LEFTOVERS		+=ft_bitstoa.c ft_putbits.c
 
 FILENAMES		=$(addprefix memory/, $(MEMORY))
 FILENAMES		+=$(addprefix list/, $(LIST))

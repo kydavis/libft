@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/28 09:52:20 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/03 17:30:36 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,14 @@ unsigned int 		ft_atoui(const char *str);
 long long			ft_atoll(const char *str);
 long				ft_atol(const char *str);
 int					ft_atoi(const char *str);
+
+/*
+** Functions to convert integers into strings.
+*/
+
+char	*ft_itoa(int n);
+char	*ft_itoa_base(int n, int base);
+char	*ft_ulltoa_base(unsigned long long n, int base, char h);
 
 /*
 ** Functions that find the length of variables

@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/09 12:15:37 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/18 13:53:06 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/03 17:07:58 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static char		*static_loader(char *str, int n, int base, size_t size)
 	{
 		mod = n % base;
 		if (mod > 9)
-			*(tail + --size) = mod + 55;
+			*(tail + --size) = mod + 'A' - 10;
 		else
 			*(tail + --size) = mod + '0';
 		n /= base;
