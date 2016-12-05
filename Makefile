@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/12/03 17:30:44 by kdavis           ###   ########.fr        #
+#    Updated: 2016/12/03 19:10:11 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SUBDIR			= memory list gnl leftovers type str ft_io
 
 MEMORY			=ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c
 MEMORY			+=ft_memchr.c ft_memcmp.c ft_memalloc.c ft_memdel.c ft_memdup.c
-MEMORY			+=ft_memrealloc.c ft_memreallocf.c
+MEMORY			+=ft_memrealloc.c ft_memreallocf.c ft_memjoinf.c
 
 LIST			=ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c
 LIST			+=ft_lstmap.c ft_lstadd_back.c ft_lstsize.c ft_relink_lst.c

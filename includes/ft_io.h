@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/03 17:30:36 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/05 13:03:42 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** math functions
 */
 
-long long			ft_absolute(long long n);
+unsigned long long			ft_absolute(long long n);
 
 /*
 ** string to integer conversion functions.
