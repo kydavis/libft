@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:02:46 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/07 16:19:33 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/07 16:41:51 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ typedef struct	s_strvec
 	size_t	len;
 	size_t	size;
 }				t_strvec;
+
+size_t				ft_strvgrow(t_strvec *self, size_t index);
 
 char				**ft_strsplit(char const *s, char c);
 
