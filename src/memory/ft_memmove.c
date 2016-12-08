@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 10:39:43 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/28 10:03:37 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/07 15:20:22 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	index = len;
 	anchor = (char *)dst;
 	csrc = (char *)src;
+	if (!src || !dst)
+		return (NULL);
 	if (dst > src)
 		while (index-- > 0)
 			anchor[index] = csrc[index];

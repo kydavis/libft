@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/12/03 19:10:11 by kdavis           ###   ########.fr        #
+#    Updated: 2016/12/07 16:18:56 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ STR				+=ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c
 STR				+=ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_strrev.c
 STR				+=ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strsub.c
 STR				+=ft_strchrrmv.c ft_strndup.c ft_strnequ.c ft_strjoin.c
-STR				+=ft_strtrim.c ft_strsplit.c ft_splcount.c
+STR				+=ft_strtrim.c ft_strsplit.c ft_splcount.c ft_strvgrow.c
 
 FT_IO			=ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
 FT_IO			+=ft_putnbr_fd.c ft_putchar.c ft_putstr.c ft_putendl.c
