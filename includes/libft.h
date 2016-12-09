@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/09 04:57:44 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/09 09:38:42 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char				*ft_itoa(int n);
 
 unsigned long long	ft_power(unsigned long long nbr, int power);
 
+void				ft_xorswapi(int *a, int *b);
 void				ft_negflag(int *n, int *neg);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/12/09 04:56:23 by kdavis           ###   ########.fr        #
+#    Updated: 2016/12/09 09:39:19 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ FT_PRINTF		+=pf_alloc_ret.c pf_funcarray.c pf_str_funcs.c
 
 LEFTOVERS		+=ft_new_handle.c
 LEFTOVERS		+=ft_power.c ft_negflag.c 
-LEFTOVERS		+=ft_bitstoa.c ft_putbits.c
+LEFTOVERS		+=ft_bitstoa.c ft_putbits.c ft_xorswap.c
 
 FILENAMES		=$(addprefix memory/, $(MEMORY))
 FILENAMES		+=$(addprefix list/, $(LIST))
