@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/28 09:52:17 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/09 04:57:44 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "ft_type.h"
 # include "ft_io.h"
 # include "ft_macro.h"
+# include "ft_printf.h"
 # include "ft_list.h"
 # include "ft_memory.h"
 # include "get_next_line.h"
