@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 11:08:38 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/22 11:12:48 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/08 17:49:26 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,6 +155,8 @@ int				get_next_line(const int fd, char **line)
 	int				sl_flag;
 	t_list			*tail;
 
+	if (fd < 0 || line == NULL)
+		return (-1);
 	if (!(tail = scan_list(&fd_lst, fd)))
 		return (-1);
 	if (!(sl_flag = search_line(tail, line)))
