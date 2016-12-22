@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_delgrid.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/28 11:09:03 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/21 13:39:27 by kdavis           ###   ########.fr       */
+/*   Created: 2016/12/21 20:25:27 by kdavis            #+#    #+#             */
+/*   Updated: 2016/12/22 15:34:10 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include <ft_memory.h>
 
-# define BUFF_SIZE 1024
+void	ft_delgrid(void ***grid)
+{
+	size_t	i;
 
-int		get_next_line(const int fd, char **line);
-int		ft_getll_base(char **str, long long *nbr);
-
-#endif
+	i = 0;
+	if (!grid)
+		return ;
+	while (*(*grid + i))
+	{
+		ft_memdel(*grid + i);
+		i++;
+	}
+	ft_memdel((void**)grid);
+}

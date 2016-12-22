@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_fsplcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/28 11:09:03 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/21 13:39:27 by kdavis           ###   ########.fr       */
+/*   Created: 2016/12/21 12:29:32 by kdavis            #+#    #+#             */
+/*   Updated: 2016/12/21 13:35:32 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include <stdlib.h>
 
-# define BUFF_SIZE 1024
+/*
+** Counts the number of chunks delimited by the characters specified by function
+**	dchar.
+*/
 
-int		get_next_line(const int fd, char **line);
-int		ft_getll_base(char **str, long long *nbr);
+unsigned int		ft_strfcount(const char *s, int (*dchar)(int))
+{
+	unsigned int	word_count;
 
-#endif
+	word_count = 0;
+	while (*s)
+	{
+		while (dchar(*s) && *s)
+			s++;
+		while (!(dchar(*s)) && *s)
+			s++;
+		word_count++;
+	}
+	if (dchar(*(s -1)))
+		word_count--;
+	return (word_count);
+}

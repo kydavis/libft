@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2016/12/09 09:39:19 by kdavis           ###   ########.fr        #
+#    Updated: 2016/12/21 20:31:56 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,13 @@ SUBDIR			= memory list gnl leftovers type str ft_io ft_printf
 
 MEMORY			=ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c
 MEMORY			+=ft_memchr.c ft_memcmp.c ft_memalloc.c ft_memdel.c ft_memdup.c
-MEMORY			+=ft_memrealloc.c ft_memreallocf.c ft_memjoinf.c
+MEMORY			+=ft_memrealloc.c ft_memreallocf.c ft_memjoinf.c ft_delgrid.c
 
 LIST			=ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c
 LIST			+=ft_lstmap.c ft_lstadd_back.c ft_lstsize.c ft_relink_lst.c
 LIST			+=ft_delcontent.c
 
-GNL				=get_next_line.c
+GNL				=get_next_line.c ft_getint_base.c
 
 TYPE			=ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
 TYPE			+=ft_iswhitespace.c ft_isprint.c ft_toupper.c ft_tolower.c
@@ -35,6 +35,7 @@ STR				+=ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_strrev.c
 STR				+=ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strsub.c
 STR				+=ft_strchrrmv.c ft_strndup.c ft_strnequ.c ft_strjoin.c
 STR				+=ft_strtrim.c ft_strsplit.c ft_splcount.c ft_strvgrow.c
+STR				+=ft_strfcount.c
 
 FT_IO			=ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
 FT_IO			+=ft_putnbr_fd.c ft_putchar.c ft_putstr.c ft_putendl.c
@@ -68,12 +69,14 @@ BUILDIR			=$(addprefix build/,$(SUBDIR))
 CFLAGS			=-Wall -Wextra -Werror -I includes/
 CC				= gcc
 
+.PHONY: all clean fclean re
+
 all: $(NAME)
 
 $(NAME): $(SRC) | $(BUILD) 
-	ar rcs $@ $(BUILD)
+	ar -rcs $@ $(BUILD)
 
-build/%.o: src/%.c | buildir
+build/%.o: src/%.c | build
 		$(CC) $(CFLAGS) -c $^ -o $@
 
 clean:
@@ -84,8 +87,6 @@ fclean: clean
 
 re: fclean all
 
-buildir: | build
-	mkdir -p $(BUILDIR)
-
 build:
 	mkdir build/ 
+	mkdir -p $(BUILDIR)

@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 09:02:46 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/07 16:41:51 by kdavis           ###   ########.fr       */
+/*   Updated: 2016/12/21 13:35:08 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char				*ft_strctrim(char *str, char c);
 size_t				ft_strlcat(char *dst, const char *str, size_t size);
 
 unsigned int		ft_splcount(const void *v, char c, size_t len);
+unsigned int		ft_strfcount(const char *s, int (*dchar)(int));
 
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
