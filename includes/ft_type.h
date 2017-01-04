@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 08:42:08 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/04 08:49:13 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/01/03 16:01:41 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	FT_TYPE_H
+#ifndef FT_TYPE_H
 # define FT_TYPE_H
 
 int					ft_isalpha(int c);

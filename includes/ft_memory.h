@@ -6,11 +6,11 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/01 17:40:20 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/21 20:31:37 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/01/03 16:05:27 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	FT_MEMORY_H
+#ifndef FT_MEMORY_H
 # define FT_MEMORY_H
 
 # include <stdlib.h>

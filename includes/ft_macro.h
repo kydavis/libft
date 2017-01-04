@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 11:38:54 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/03 11:49:37 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/01/03 16:00:50 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define FT_S8_MAX 127
 # define FT_S16_MIN -32768
 # define FT_S16_MAX 32767
-# define FT_S32_MIN -2147483648 
+# define FT_S32_MIN -2147483648
 # define FT_S32_MAX 2147483647
 # define FT_S64_MIN (-9223372036854775807 - 1)
 # define FT_S64_MAX 9223372036854775807
@@ -39,7 +39,7 @@
 # define FT_U64_MAX 18446744073709551615U
 
 /*
-** The max and min for the different types (should be changed to the 
+** The max and min for the different types (should be changed to the
 ** appropriate value based on the computer.)
 */
 
