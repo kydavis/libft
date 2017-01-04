@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 11:08:38 by kdavis            #+#    #+#             */
-/*   Updated: 2017/01/04 14:53:30 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/01/04 14:56:28 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,7 @@ ssize_t			get_next_line(const int fd, char **line)
 
 	if (fd < 0 || line == NULL || !(tail = scan_list(&fd_lst, fd)))
 		return (-1);
+	*line = NULL;
 	if (!(sl_flag = search_line(tail, line)))
 	{
 		ft_relink_lst(&fd_lst, tail);
@@ -167,8 +168,9 @@ ssize_t			get_next_line(const int fd, char **line)
 		return (-1);
 	}
 	if (sl_flag == -2)
+	{
 		ft_relink_lst(&fd_lst, tail);
-	if (sl_flag == -2)
 		return (-1);
+	}
 	return (sl_flag);
 }
