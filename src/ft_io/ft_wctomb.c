@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 16:41:24 by kdavis            #+#    #+#             */
-/*   Updated: 2016/11/26 20:42:05 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/01/03 15:56:59 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_wctomb(char *s, wchar_t wc)
 	if (!s)
 		return (0);
 	bytes = 0;
-	if (wc > 0x10FFFF)
+	if (wc > 0x10FFFF || (wc >= 0xD800 && wc <= 0xDFFF))
 		return (-1);
 	if (wc > 0xFFFF)
 		*(s + bytes++) = 0xF0 | ((wc & 0x1C0000) >> 18);
