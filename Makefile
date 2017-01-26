@@ -6,7 +6,7 @@
 #    By: kdavis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 09:50:14 by kdavis            #+#    #+#              #
-#    Updated: 2017/01/25 13:30:04 by kdavis           ###   ########.fr        #
+#    Updated: 2017/01/25 16:43:39 by kdavis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ LEFTOVERS		+=ft_bitstoa.c ft_putbits.c ft_xorswap.c
 
 MATRIX			=ftmx_id.c ftmx_scale.c ftmx_translate.c ftmx_mult.c
 
-VECTOR			=ft_initialize_vec.c
+VECTOR			=ft_initialize_vec.c ft_grow_vec.c
 
 FILENAMES		=$(addprefix memory/, $(MEMORY))
 FILENAMES		+=$(addprefix list/, $(LIST))

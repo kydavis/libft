@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/25 12:16:20 by kdavis            #+#    #+#             */
-/*   Updated: 2017/01/25 14:46:41 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/01/25 16:40:43 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,6 @@
 
 # include <string.h>
 # include <stdint.h>
-
-typedef struct	s_i8vec
-{
-	char		*arr;
-	size_t		len;
-	size_t		size;
-}				t_i8vec;
-
-typedef struct	s_i32vec
-{
-	int			*arr;
-	size_t		len;
-	size_t		size;
-}				t_i32vec;
-
-typedef struct	s_i64vec
-{
-	long long	*arr;
-	size_t		len;
-	size_t		size;
-}				t_i64vec;
 
 typedef struct	s_vec
 {
@@ -46,4 +25,5 @@ typedef struct	s_vec
 }				t_vec;
 
 int				ft_initialize_vec(t_vec *vec, uint8_t sz, size_t t, size_t len);
+int				ft_grow_vec(t_vec *self, size_t requested_bytes);
 #endif
