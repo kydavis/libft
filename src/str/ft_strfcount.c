@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/21 12:29:32 by kdavis            #+#    #+#             */
-/*   Updated: 2016/12/21 13:35:32 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/01/28 18:54:31 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ unsigned int		ft_strfcount(const char *s, int (*dchar)(int))
 			s++;
 		word_count++;
 	}
-	if (dchar(*(s -1)))
+	if (dchar(*(s - 1)))
 		word_count--;
 	return (word_count);
 }
