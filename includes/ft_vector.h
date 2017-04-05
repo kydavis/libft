@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/25 12:16:20 by kdavis            #+#    #+#             */
-/*   Updated: 2017/03/15 16:43:06 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/04/04 17:29:38 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ typedef struct	s_vec
 	uint8_t		size;
 }				t_vec;
 
+void			*ft_vecindex(t_vec *self, size_t idx);
+int				ft_vec_foreach(t_vec *self, int (f)(void*));
 int				ft_initialize_vec(t_vec *vec, uint8_t sz, size_t t, size_t len);
 int				ft_grow_vec(t_vec *self, size_t requested_bytes);
 int				ft_vecapp(t_vec *self, void *src, size_t n);
