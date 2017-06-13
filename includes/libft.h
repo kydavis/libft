@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:10:08 by kdavis            #+#    #+#             */
-/*   Updated: 2017/01/03 15:50:34 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/06/12 18:26:30 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdint.h>
 # include <ft_string.h>
 # include <ft_type.h>
 # include <ft_io.h>
-# include <ft_macro.h>
 # include <ft_matrix.h>
 # include <ft_printf.h>
 # include <ft_list.h>
