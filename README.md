@@ -16,5 +16,5 @@ Summary: A personal C-library used for completing projects at 42
  | ft_list		  | Functions centered around using linked lists								                  	|
  | ft_printf	  | Functions needed for implementing a custom version of the printf function		    |
  | get_next_line| A custom function used for reading input line by line		            					|
- -----------------------------------------------------------------------------------------------|
+ -----------------------------------------------------------------------------------------------
  
