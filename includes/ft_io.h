@@ -6,7 +6,7 @@
 /*   By: kdavis <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:50:38 by kdavis            #+#    #+#             */
-/*   Updated: 2017/06/12 18:13:13 by kdavis           ###   ########.fr       */
+/*   Updated: 2017/06/12 18:32:46 by kdavis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <wchar.h>
 
 /*
-** math functions
+** ft_absolute is included in this library for its use in the
+** atox functions below
 */
 
 unsigned long long	ft_absolute(long long n);
